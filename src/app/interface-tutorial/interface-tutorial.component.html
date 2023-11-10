@@ -1,0 +1,10 @@
+<p>interface-tutorial works!</p>
+<button (click)="addNew()">Add New</button>
+<ul *ngFor="let Data of PostArray; let i=index">
+  <li>{{ Data.id }} {{ Data.postTitle }} 
+
+<button (click)="onDelete(i)">Delete</button>
+
+  </li>
+
+</ul>

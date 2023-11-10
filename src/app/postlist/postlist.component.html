@@ -1,0 +1,9 @@
+<p class="text-p">postlist works!</p>
+
+<!-- Passing data to the service array -->
+<button (click)="onAdd()">Add New</button>
+
+<ul *ngFor="let dataValue of postDataArray">
+  <li>{{ dataValue.postTitle }}</li>
+  <li></li>
+</ul>

@@ -1,0 +1,15 @@
+.pClass {
+  color: crimson;
+  text-align: center;
+  margin-top: 10px;
+}
+.from-class,
+.preview-area {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.class-back {
+  background-color: yellow;
+  padding: 10px;
+}

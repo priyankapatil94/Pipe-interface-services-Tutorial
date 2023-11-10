@@ -1,0 +1,39 @@
+<p class="pClass">Post Form</p>
+
+<div class="from-class">
+  <br />
+  <div><input type="text" placeholder="Name" [(ngModel)]="Name" /></div>
+  <br />
+  <div>
+    <textarea
+      [(ngModel)]="PostDetails"
+      cols="30"
+      rows="10"
+      placeholder=""
+      placeholder="Post Details"
+    ></textarea>
+  </div>
+  <br />
+  <div>
+    <input type="text" placeholder="Image Url" [(ngModel)]="ImageUrl" />
+  </div>
+  <br />
+  <div><input type="text" placeholder="Link Url" [(ngModel)]="LinkUrl" /></div>
+  <br />
+  <div><input type="checkbox" [(ngModel)]="addBackground" />Add Background</div>
+</div>
+
+<div class="preview-area">
+  <p>{{ Name }}</p>
+  <p>
+    <span [class.class-back]="addBackground">{{ PostDetails }}</span>
+  </p>
+  <img [src]="ImageUrl" alt="" />
+  <a
+    [href]="LinkUrl"
+    target="_blank"
+    [style.display]="LinkUrl ? 'block' : 'none'"
+  >
+    more details</a
+  >
+</div>

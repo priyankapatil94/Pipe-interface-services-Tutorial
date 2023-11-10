@@ -1,0 +1,44 @@
+<p>userdetails-angular-directives works!</p>
+<div class="User-Form">
+  <h3>User Details Form</h3>
+  <br />
+  <input type="text" placeholder="User Name" [(ngModel)]="userName_Id" />
+  <br /><br />
+  <input type="text" placeholder="EMAIL Id" [(ngModel)]="Email_Id" />
+  <br /><br />
+  <textarea
+    name=""
+    id=""
+    cols="30"
+    rows="10"
+    placeholder="Address"
+    [(ngModel)]="Address_Id"
+  ></textarea>
+  <br /><br />
+  <button (click)="onclick()">Save Data</button>
+</div>
+<div>
+  <div *ngIf="userArray.length > 0; else noData">
+    <table width="500px">
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Action</th>
+      </thead>
+      <tr *ngFor="let data of userArray; let i = index">
+        <td>{{ i + 1 }}</td>
+        <!-- Here we need to pass the object key... -->
+        <td>{{ data.Name }}</td>
+        <td>{{ data.Email }}</td>
+        <td>{{ data.Address }}</td>
+        <td><button (click)="onDelete(i)">Delete</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<ng-template #noData>
+  <h4>There is No data</h4>
+</ng-template>
